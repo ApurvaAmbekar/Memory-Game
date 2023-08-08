@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    height: 100vh;
+    background-color: rgb(66, 66, 66);
+    /* display: flex; */
+}
+
+.heading{
+    /* border: 1px solid red; */
+    height: 100px;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 20px;
+
+}
+.heading h1{
+    margin: 10px  40px ;
+
+}
+#points{
+    margin: 10px  40px ;
+    height: 80px;
+    width: 10%;
+    background-color: aliceblue;
+    font-size: 300%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.gameContainer {
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    /* border: 2px solid red; */
+  }
+
+.card {
+    width: 11%;
+    height: 23%;
+    margin: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.3s;
+    cursor: pointer;
+    background-color: black;
+}
+
+.card:active {
+    transform: scale(0.95);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+.front,
+.back {
+  background-color: #232121;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+  
